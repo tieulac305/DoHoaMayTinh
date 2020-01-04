@@ -37,7 +37,7 @@ void bresline2(int xa, int ya, int xb, int yb){
 	//duong ngang
 	if(ya>yb) std::swap(ya,yb); //dam bao ya<=yb
 	int c=getcolor();
-	for(int x=xa ; x<=xb ; x++){
+	for(int y=ya ; y<=yb ; y++){
 		putpixel(xa,y,c);
 	}
 }
