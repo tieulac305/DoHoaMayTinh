@@ -77,7 +77,7 @@ void bresline4(int xa, int ya, int xb, int yb){
 	int dx=xb-xa, dy=yb-ya;
 	int const1 = 2*dy;
 	int const2 = 2*dy + 2*dx; // khac 3 cho nay
-	int p = 2*dy - dx;
+	int p = 2*dy + dx; // khac ca cho nay
 	int x,y,c;
 	y=ya;
 	c=getcolor();
@@ -128,7 +128,7 @@ void bresline6(int xa, int ya, int xb, int yb){
 	int dx=xb-xa, dy=yb-ya;
 	int const1 = 2*dx;
 	int const2 = 2*dx + 2*dy; // khac 5 cho nay
-	int p = 2*dx - dy;
+	int p = 2*dx + dy; // khac ca cho nay
 	int x,y,c;
 	x=xa;
 	c=getcolor();
