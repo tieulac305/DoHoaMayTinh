@@ -2,14 +2,14 @@
 
 int kod(int x1,int y1, int x2, int y2, int x, int y){
 	int k=0;
-	if(x<x1) k=k*2;
-	else k=k*2+1;
-	if(x>x2) k=k*2;
-	else k=k*2+1;
-	if(y<y1) k=k*2;
-	else k=k*2+1;
-	if(y>y2) k=k*2;
-	else k=k*2+1;
+	if(x<x1) k=k*2+1;
+	else k=k*2;
+	if(x>x2) k=k*2+1;
+	else k=k*2;
+	if(y<y1) k=k*2+1;
+	else k=k*2;
+	if(y>y2) k=k*2+1;
+	else k=k*2;
 	return k;
 }
 
@@ -45,19 +45,19 @@ void clip(int x1, int y1, int x2, int y2, int xa, int ya, int xb, int yb){
 			}
 			float m=(float)(yb-ya)/(xb-xa);//slope
 			if(get(a,3)==1){
-				ya=(int) (m*(x1-xa)+ya);
+				ya=(int) (m*(x1-xa)+ya+0.5); // round
 				xa=x1;
 			}
 			else if(get(a,2)==1){
-				ya=(int) (m*(x2-xa)+ya);
+				ya=(int) (m*(x2-xa)+ya+0.5);
 				xa=x2;
 			}
 			else if(get(a,1)==1){
-				xa=(int) (1/m*(y1-ya)+xa);
+				xa=(int) (1/m*(y1-ya)+xa+0.5);
 				ya=y1;
 			}
 			else if(get(a,0)==1){
-				xa=(int) (1/m*(y2-ya)+xa);
+				xa=(int) (1/m*(y2-ya)+xa+0.5);
 				ya=y2;
 			}
 		}
@@ -68,13 +68,10 @@ int main(){
 	initwindow(640,480);
 	rectangle(100,100,300,250);
 	setcolor(GREEN);
-	line(100,50,250,80);
+	line(100,50,250,200);
 	getch();
-	
-	setcolor(YELLOW);
-	line(100,50,250,80);
 	setcolor(RED);
-	clip(100,100,300,250,100,50,250,80);
+	clip(100,100,300,250,100,50,250,200);
 	//duong thang nua do o trong view, vang o ngoai view
 	
 	getch();
