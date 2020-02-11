@@ -72,7 +72,7 @@ void vedothi(float xmin, float xmax){
 int main(){
 	int gd=0, gm;
 	initgraph(&gd,&gm,"");
-	cuaso(-3*M_PI, -1.5, 4*M_PI, 1.5);
+	cuaso(-3*M_PI, -3.5, 4*M_PI, -0.5);
 	khungnhin(50,50,450,400);
 	setcolor(4);
 	veanhdothi(-2*M_PI, 3*M_PI);
