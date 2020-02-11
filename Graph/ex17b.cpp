@@ -76,7 +76,7 @@ int main(){
 	cuaso(-M_PI/3, -3.5, M_PI/3, -0.5);
 	khungnhin(50,50,500,400);
 	setcolor(4);
-	vedothi(-M_PI/4, M_PI/4);
+	veanhdothi(-M_PI/4, M_PI/4);
 	getch();
 	closegraph();
 }
