@@ -1,5 +1,4 @@
 ﻿# Đồ họa máy tính
 
-Ai đó đi qua đây mà lấy code của mình thì hãy đem về chạy thử xem có chạy hay không giúp mình rồi pull issue hay gì đó để mình sửa với chứ máy mình không có  thư viện đồ họa :'(.  
-Thank you very very very much for your help.  
+Đồ họa máy tính cơ bản si đa, code lại thư viện graphics nhưng lại là bản cùi hơn graphics và phải dùng thư viện graphics để code?
 _Liên hệ: m.me/tieulac305_

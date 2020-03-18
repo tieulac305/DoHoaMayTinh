@@ -31,11 +31,11 @@ void brescircle(int x0, int y0 , int r){
 int main(){
 	initwindow(640,480);
 	setcolor(GREEN);
-	
+
 	brescircle(300,200,100);
-	
+
 	getch();
 	closegraph();
-	
+
 	return 0;
 }
