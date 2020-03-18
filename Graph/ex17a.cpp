@@ -15,17 +15,46 @@ void khungnhin(int x1, int y1, int x2, int y2){
 	tlx=(xvmax-xvmin)/(xwmax-xwmin);
 	tly=(yvmax-yvmin)/(ywmax-ywmin);
 }
-void chuyenden2D(float x, float y){
-	int xm=(int)(tlx*(x-xwmin)+xvmin+0.5);
+
+void chuyentoado(float &x, float &y){
+  int xm=(int)(tlx*(x-xwmin)+xvmin+0.5);
 	int ym= (int)(tly*(ywmax-y)+yvmin+0.5);
-	moveto(xm,ym);
+	x=xm,y=ym;
+}
+
+void chuyenden2D(float x, float y){
+	chuyentoado(x,y);
+	moveto(x,y);
 }
 void veden2D(float x, float y){
-	int xm=(int)(tlx*(x-xwmin)+xvmin+0.5);
-	int ym= (int)(tly*(ywmax-y)+yvmin+0.5);
-	lineto(xm,ym);
+	chuyentoado(x,y);
+	lineto(x,y);
+}
+
+void vetructoado(){
+  int m=getcolor();
+  setcolor(WHITE);
+  float x1=xwmin,x2=xwmax,y1=0,y2=0;
+  float x3=0,y3=ywmin,x4=0,y4=ywmax;
+  //dung line luon cho nhanh
+  chuyentoado(x1,y1);
+  chuyentoado(x2,y2);
+  chuyentoado(x3,y3);
+  chuyentoado(x4,y4);
+  if(ywmax*ywmin<0){
+    line(x1,y1,x2,y2);
+    line(x2-5,y2-5,x2,y2);
+    line(x2-5,y2+5,x2,y2);
+  }
+  if(xwmax*xwmin<0){
+    line(x3,y3,x4,y4);
+    line(x4-5,y4+5,x4,y4);
+    line(x4+5,y4+5,x4,y4);
+  }
+  setcolor(m);
 }
 void vedothi(float xmin, float xmax){
+  vetructoado();
 	float dx=0.01;
 	float x=xmin;
 	float y=tan(x)-2;
@@ -40,8 +69,8 @@ void vedothi(float xmin, float xmax){
 int main(){
 	int gd=0, gm;
 	initgraph(&gd,&gm,"");
-	cuaso(-M_PI/3, -3.5, M_PI/3, -0.5);
-	khungnhin(50,50,500,400);
+	cuaso(-M_PI/2, -3.5, M_PI/2, -0.5);
+	khungnhin(50,50,300,300);
 	setcolor(4);
 	vedothi(-M_PI/4, M_PI/4);
 	getch();
