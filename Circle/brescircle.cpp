@@ -18,8 +18,8 @@ void brescircle(int x0, int y0 , int r){
 	while(x<=y){
 		put8pixel(x0,y0,x,y);
 		if(p>0){
-			y--;
 			p=p+4*(x-y)+10;
+			y-=1;
 		}
 		else{
 			p=p+4*x+6;
