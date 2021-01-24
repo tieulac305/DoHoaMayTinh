@@ -10,8 +10,8 @@ _Liên hệ: m.me/tieulac305_
 
 B1: Tải các file cần thiết: http://winbgim.codecutter.org/V6_0/WinBGIm_Library6_0_Nov2005.zip  
 B2: Đối với devC và CodeBlocks:\
-    Bỏ 2 mục .h vào mục include, với CodeBlocks là MinGW/include\
-    Bỏ file libbgi.a vào mục lib, với CodeBlocks là MinGW/lib\
+    Copy 2 mục .h vào mục include, với CodeBlocks là MinGW/include\
+    Copy file libbgi.a vào mục lib, với CodeBlocks là MinGW/lib\
     \
     - Với DevC:
     Gõ Alt-P và paste những mục sau vào Linker:\
