@@ -32,6 +32,7 @@ B2: Đối với devC và CodeBlocks:\
     \
     Tại tab `Other linker options`: Paste những mục sau:\
     ```-lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32```
+    \
     Đối với các IDE khác xem hướng dẫn tại: www.cs.colorado.edu/~main/bgi.
 
 B3: Khi này, ta đã có thể include thư viện graphics.h tuy nhiên có thể thư viện sẽ phát sinh lỗi ở dòng 302 do có 2 biến right (nếu mình nhớ k nhầm), mở `graphics.h` ra và sửa dòng đó:
