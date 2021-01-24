@@ -24,8 +24,8 @@ B2: Đối với devC và CodeBlocks:\
     -lole32
     ```
     \
-    - Với CodeBlocks: Mở cài đặt như sau:\
     \
+    - Với CodeBlocks: Mở cài đặt như sau:\
     `Settings > Compiler > Linker Settings`\
     \
     Tại tab `Link Libraries`: Chọn `Add` sau đó tìm đến đường dẫn chứa `libbgi.a` để thêm vào.\
